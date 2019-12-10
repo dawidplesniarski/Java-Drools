@@ -4,12 +4,6 @@ import java.util.Scanner
 dialect  "mvel"
 
 
-rule "zasilacz"
-when
-    String(this == "a")
-then
-    System.out.println("b");
-end
 
 rule Init when
 then

@@ -16,6 +16,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -111,7 +116,7 @@
       <workItem from="1575989142038" duration="918000" />
       <workItem from="1575992273251" duration="3758000" />
       <workItem from="1576010767864" duration="794000" />
-      <workItem from="1576011752490" duration="376000" />
+      <workItem from="1576011752490" duration="615000" />
     </task>
     <task id="LOCAL-00001" summary="useless packages deleted">
       <created>1575984204529</created>
