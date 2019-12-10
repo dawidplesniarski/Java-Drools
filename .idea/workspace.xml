@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a28709ed-796e-426a-89b9-8b5a056abb31" name="Default Changelist" comment="" />
+    <list default="true" id="a28709ed-796e-426a-89b9-8b5a056abb31" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +119,7 @@
       <workItem from="1575992273251" duration="3758000" />
       <workItem from="1576010767864" duration="794000" />
       <workItem from="1576011752490" duration="615000" />
+      <workItem from="1576012420152" duration="465000" />
     </task>
     <task id="LOCAL-00001" summary="useless packages deleted">
       <created>1575984204529</created>
@@ -125,14 +128,33 @@
       <option name="project" value="LOCAL" />
       <updated>1575984204529</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Useless rule deleted.">
+      <created>1576012640100</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1576012640100</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="useless packages deleted" />
-    <option name="LAST_COMMIT_MESSAGE" value="useless packages deleted" />
+    <MESSAGE value="Useless rule deleted." />
+    <option name="LAST_COMMIT_MESSAGE" value="Useless rule deleted." />
   </component>
 </project>
