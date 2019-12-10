@@ -199,7 +199,7 @@ rule KabelSprawny when
     Answer(question == q, answer == "t")
 then
     System.out.println("Uruchom Diagnostyke karty graficznej. Udaj się do serwisu w celu dokładnego sprawdzenia podzespołów. Odłącz wszystkie urządenia od komputera" +
-     "i uruchom ponownie komputer");
+     "lub uruchom ponownie komputer");
 end
 
 rule KomputerSieNieWlacza when
