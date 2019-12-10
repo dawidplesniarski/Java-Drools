@@ -4,12 +4,6 @@ import java.util.Scanner
 dialect  "mvel"
 
 
-rule "zasilacz"
-when
-    String(this == "a")
-then
-    System.out.println("b");
-end
 
 rule Init when
 then
@@ -205,7 +199,7 @@ rule KabelSprawny when
     Answer(question == q, answer == "t")
 then
     System.out.println("Uruchom Diagnostyke karty graficznej. Udaj się do serwisu w celu dokładnego sprawdzenia podzespołów. Odłącz wszystkie urządenia od komputera" +
-     "i uruchom ponownie komputer");
+     "lub uruchom ponownie komputer");
 end
 
 rule KomputerSieNieWlacza when

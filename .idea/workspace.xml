@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a28709ed-796e-426a-89b9-8b5a056abb31" name="Default Changelist" comment="" />
+    <list default="true" id="a28709ed-796e-426a-89b9-8b5a056abb31" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/drools/examples/backwardchaining/computers.drl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/drools/examples/backwardchaining/computers.drl" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +91,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ComputerDiagnostics" />
+        <item itemvalue="Application.ComputerDiagnostics" />
+        <item itemvalue="Application.ComputerDiagnostics" />
+        <item itemvalue="Application.ComputerDiagnostics" />
         <item itemvalue="Application.ComputerDiagnostics" />
       </list>
     </recent_temporary>
