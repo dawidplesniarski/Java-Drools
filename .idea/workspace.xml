@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a28709ed-796e-426a-89b9-8b5a056abb31" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1UnLjHPy0dvlNeoqGcXm6y2S78C" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575986641280" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/org/drools/examples" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/org/drools/examples/backwardchaining" />
+      <recent name="C:\Users\ASRock\Desktop\drools-distribution-7.30.0.Final\examples\sources\src\main\resources\org\drools\examples\backwardchaining" />
+      <recent name="C:\Users\ASRock\Desktop\drools-distribution-7.30.0.Final\examples\sources\src\main\java\org\drools\examples\backwardchaining" />
+      <recent name="C:\Users\ASRock\Desktop\drools-distribution-7.30.0.Final\examples\sources\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.ComputerDiagnostics">
+    <configuration name="ComputerDiagnostics" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.drools.examples.backwardchaining.ComputerDiagnostics" />
+      <module name="drools-examples" />
+      <option name="VM_PARAMETERS" value="-Xms256m -Xmx512m -server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.drools.examples.backwardchaining.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DroolsExamplesApp" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.drools.examples.DroolsExamplesApp" />
+      <module name="drools-examples" />
+      <option name="VM_PARAMETERS" value="-Xms256m -Xmx512m -server" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.DroolsExamplesApp" />
+      <item itemvalue="Application.ComputerDiagnostics" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ComputerDiagnostics" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a28709ed-796e-426a-89b9-8b5a056abb31" name="Default Changelist" comment="" />
+      <created>1575226718088</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575226718088</updated>
+      <workItem from="1575226726177" duration="447000" />
+      <workItem from="1575227208770" duration="2906000" />
+      <workItem from="1575650201324" duration="55000" />
+      <workItem from="1575979676126" duration="6647000" />
+      <workItem from="1575987552576" duration="1321000" />
+      <workItem from="1575989142038" duration="918000" />
+      <workItem from="1575992273251" duration="3758000" />
+      <workItem from="1576010767864" duration="794000" />
+      <workItem from="1576011752490" duration="376000" />
+    </task>
+    <task id="LOCAL-00001" summary="useless packages deleted">
+      <created>1575984204529</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575984204529</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="useless packages deleted" />
+    <option name="LAST_COMMIT_MESSAGE" value="useless packages deleted" />
+  </component>
+</project>

@@ -1,0 +1,337 @@
+package org.drools.examples.backwardchaining
+import java.util.Scanner
+
+dialect  "mvel"
+
+
+rule "zasilacz"
+when
+    String(this == "a")
+then
+    System.out.println("b");
+end
+
+rule Init when
+then
+System.out.println("Odpowiedz tak lub nie, t - tak n - nie");
+insert(new Question("1", "Czy komputer się uruchamia?"))
+
+end
+
+rule UruchamiaSie when
+    q : Question( id == "1")
+    Answer(question == q, answer == "t")
+then
+    insert(new Question("2", "Czy obraz jest wyświetlany?"))
+end
+
+rule ObrazJestWyswietlany when
+    q : Question(id == "2")
+    Answer(question == q, answer == "t")
+then
+    insert(new Question("3", "Czy system uruchamia się prawidłowo?"))
+end
+
+rule SystemUruchamiaSiePrawidlowo when
+    q : Question(id == "3")
+    Answer(question == q, answer == "t")
+then
+    insert(new Question("4", "Czy system pokazuje komunikat o błędzie?"))
+end
+
+rule PokazujeKomunikatOBledzie when
+    q : Question(id == "4")
+    Answer(question == q, answer == "t")
+then
+    System.out.println("Skorzystaj ze wsparcia systemu z użyciem kodu błędu");
+end
+
+rule NiePokazujeKomunikatuOBledzie when
+    q : Question(id == "4")
+    Answer(question == q, answer == "n")
+then
+    insert(new Question("5", "Czy dzwięk działa prawidłowo?"))
+end
+
+rule DzwiekNieDzialaPrawidlowo when
+    q : Question(id == "5")
+    Answer(question == q, answer == "n")
+then
+    System.out.println("Sprawdz podłączenie kabla głośników");
+end
+
+rule DzwiekDzialaPrawidlowo when
+    q : Question(id == "5")
+    Answer(question == q, answer == "t")
+then
+     insert(new Question("6", "Czy któraś z aplikacji nie odpowada?"))
+end
+
+rule AplikacjaNieOdpowiada when
+    q : Question(id == "6")
+    Answer(question == q, answer == "t")
+then
+     insert(new Question("7", "Czy dana aplikacja pokazuje komunikat z błędem?"))
+end
+
+rule AplikacjaPokazujeKomunikatZBledem when
+    q : Question(id == "7")
+    Answer(question == q, answer == "t")
+then
+    System.out.println("Skorzystaj ze wsparcia producenta aplikacji");
+end
+
+rule AplikacjaNiePokazujeKomunikatu when
+    q : Question(id == "7")
+    Answer(question == q, answer == "n")
+then
+     insert(new Question("8", "Czy dostępne są aktualizacje aplkacji"))
+end
+
+rule AktualizacjeDostepne when
+    q : Question(id == "8")
+    Answer( question == q, answer == "t")
+then
+    System.out.println("Zaktualizuj aplikacje");
+end
+
+rule AktualizacjeNieDostepne when
+    q : Question(id == "8")
+    Answer(question == q, answer == "n")
+then
+    System.out.println("Zainstaluj aplikacje ponownie");
+end
+
+rule AplikacjaOdpowiada when
+    q : Question(id == "6")
+    Answer(question == q, answer == "n")
+then
+    insert(new Question("9", "Czy system jest aktualny"))
+end
+
+rule SystemNieAktualny when
+    q : Question(id == "9")
+    Answer(question == q, answer == "n")
+then
+    System.out.println("Uruchom aktualizacje systemu");
+end
+
+rule SystemAktualny when
+    q : Question(id == "9")
+    Answer(question == q, answer == "t")
+then
+    insert(new Question("10", "Czy wszystkie sterowniki są zainstalowane i aktualne"))
+end
+
+rule SterownikiAktualne when
+    q : Question(id == "10")
+    Answer(question == q, answer == "t")
+then
+    System.out.println("Uruchom skanowanie programem antywirusowym");
+end
+
+rule SterownikiNieAktualne when
+    q : Question(id == "10")
+    Answer(question == q, answer == "n")
+then
+    System.out.println("Zaktualizuj sterowniki");
+end
+
+rule SystemNieUruchamiaSiePrawidlowo when
+    q : Question(id == "3")
+    Answer(question == q, answer == "n")
+then
+    insert(new Question("11", "Uruchom komputer w trybie Safe Mode (klawisz F8). Pomogło?"))
+end
+
+rule F8Pomoglo when
+    q : Question(id == "11")
+    Answer(question == q, answer == "t")
+then
+    System.out.println("OK");
+end
+
+rule F8NiePomoglo when
+    q : Question(id == "11")
+    Answer(question == q, answer == "n")
+then
+    insert(new Question("12", "Uruchom skanowanie komputera z płyty instalacyjnej systemu. Pomogło?"))
+end
+
+rule SkanowaniePomoglo when
+    q : Question(id == "12")
+    Answer(question == q, answer == "t")
+then
+    System.out.println("OK");
+end
+
+rule SkanowanieNiePomoglo when
+    q : Question(id == "12")
+    Answer(question == q, answer == "n")
+then
+    System.out.println("Uruchom narzędzie do diagnostyki dysku lub udaj się do serwisu w celu sprawdzenia dysku oraz RAM");
+end
+
+rule ObrazNieJestWyswietlany when
+    q : Question(id == 2)
+    Answer(question == q, answer == "n")
+then
+    insert(new Question("13", "Czy monitor jest podpięty"))
+end
+
+rule MonitorNiePodpiety when
+    q : Question(id == "13")
+    Answer(question == q, answer == "n")
+then
+    System.out.println("Podepnij monitor");
+end
+
+rule MonitorPodpiety when
+    q : Question(id == "13")
+    Answer(question == q, answer == "t")
+then
+    insert(new Question("14", "Czy kabel jest sprawny"))
+end
+
+rule KabelNieSprawny when
+    q : Question(id == "14")
+    Answer(question == q, answer == "n")
+then
+    System.out.println("Wymień kabel");
+end
+
+rule KabelSprawny when
+    q : Question(id == "14")
+    Answer(question == q, answer == "t")
+then
+    System.out.println("Uruchom Diagnostyke karty graficznej. Udaj się do serwisu w celu dokładnego sprawdzenia podzespołów. Odłącz wszystkie urządenia od komputera" +
+     "i uruchom ponownie komputer");
+end
+
+rule KomputerSieNieWlacza when
+    q : Question(id == "1")
+    Answer(question == q, answer == "n")
+then
+    insert(new Question("15", "Czy kabel zasilający jest podpięty"))
+end
+
+rule KabelNiePodpiety when
+    q : Question(id == "15")
+    Answer(question == q, answer == "n")
+then
+    System.out.println("Podepnij zasilanie");
+end
+
+rule KabelPodpiety when
+    q : Question(id == "15")
+    Answer(question == q, answer =="t")
+then
+    insert(new Question("16", "Czy włącznik z tyłu komputera jest w pozycji 1?"))
+end
+
+rule WlacznikOff when
+    q : Question(id == "16")
+    Answer(question == q, answer =="n")
+then
+    System.out.println("Ustaw włącznik na pozycji 1");
+end
+
+rule WlacznikOn when
+    q : Question(id == "16")
+    Answer(question == q, answer == "t")
+then
+     insert(new Question("17", "Czy komputer w jakikolwiek sposób reaguje?"))
+end
+
+rule KomputerNieReaguje when
+    q : Question(id == "17")
+    Answer(question == q, answer == "n")
+then
+    System.out.println("Udaj się do serwsu lub wymień uszkodzony zasilacz");
+end
+
+rule KomputerReaguje when
+    q : Question(id == "17")
+    Answer(question == q, answer == "t")
+then
+    insert(new Question("18", "Czy na ekranie pojawia się komunikat o błędach?"))
+end
+
+rule PojawiaSieKomunikatOBledach when
+    q : Question(id == "18")
+    Answer(question == q, answer == "t")
+then
+    System.out.println("Skorzystaj ze wsparcia producenta używając kodu błędu.");
+end
+
+rule NiePojawiaSieKomunikatOBledach when
+    q : Question(id == "18")
+    Answer(question == q, answer == "n")
+then
+    insert(new Question("19", "Odłącz zasilacz na chwile i uruchom komputer ponownie. Czy komputer zwrócił komunikat"));
+end
+
+rule ZwrocilKomunikat when
+    q : Question(id == "19")
+    Answer(question == q, answer == "t")
+then
+    System.out.println("Skorzystaj ze wsparcia producenta używając kodu błędu.");
+end
+
+rule NieZwrocilKomunikatu when
+    q : Question(id == "19")
+    Answer(question == q, answer == "n")
+then
+    insert (new Question("20", "Uruchom system w trybie Safe Mode. Pomogło?"))
+end
+
+rule SafeModePomoglo when
+    q : Question(id == "20")
+    Answer(question == q, answer == "t")
+then
+    System.out.println("OK");
+end
+
+rule SafeModeNiePomoglo when
+    q : Question(id == "20")
+    Answer(question == q, answer == "n")
+then
+    insert(new Question("21", "Uruchom skanowanie systemu z płyty instalacyjnej. Pomogło?"))
+end
+
+rule SkanPomogl when
+    q : Question(id == "21")
+    Answer(question == q, answer == "t")
+then
+    System.out.println("OK");
+end
+
+rule SkanNiePomogl when
+    q : Question(id == "21")
+    Answer(question == q, answer == "n")
+then
+    System.out.println("Udaj się do serwisu w celu sprawdzenia podzespołów");
+end
+
+
+
+
+
+rule AskQuestion when
+    q : Question()
+    not Answer(question == q)
+then
+    System.out.println( q.question );
+    System.out.print("> ");
+    Scanner keyboard = new Scanner(System.in);
+    insert( keyboard.nextLine() );
+end
+
+rule ProcessAnswer when
+    s : String(this matches "[tn]" )
+    q : Question()
+    not Answer( question == q)
+then
+    insert( new Answer(q, s) );
+    delete(s) ;
+end
