@@ -3,6 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a28709ed-796e-426a-89b9-8b5a056abb31" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/drools/examples/backwardchaining/ComputerDiagnostics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/drools/examples/backwardchaining/ComputerDiagnostics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/drools/examples/backwardchaining/GUI.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/drools/examples/backwardchaining/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/drools/examples/backwardchaining/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/drools/examples/backwardchaining/computers.drl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/drools/examples/backwardchaining/computers.drl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/drools/examples/backwardchaining/ComputerDiagnostics.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/drools/examples/backwardchaining/ComputerDiagnostics.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/drools/examples/backwardchaining/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/drools/examples/backwardchaining/GUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/drools/examples/backwardchaining/computers.drl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/drools/examples/backwardchaining/computers.drl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,6 +127,10 @@
       <workItem from="1576010767864" duration="794000" />
       <workItem from="1576011752490" duration="615000" />
       <workItem from="1576012420152" duration="465000" />
+      <workItem from="1576069217347" duration="62000" />
+      <workItem from="1576073033747" duration="1655000" />
+      <workItem from="1576101738072" duration="48000" />
+      <workItem from="1576601540910" duration="1406000" />
     </task>
     <task id="LOCAL-00001" summary="useless packages deleted">
       <created>1575984204529</created>
@@ -146,7 +157,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

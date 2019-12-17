@@ -9,7 +9,7 @@ rule Init when
 then
 System.out.println("Odpowiedz tak lub nie, t - tak n - nie");
 insert(new Question("1", "Czy komputer się uruchamia?"))
-
+GUI.lMessage.setText("Czy komputer się uruchamia?");
 end
 
 rule UruchamiaSie when
