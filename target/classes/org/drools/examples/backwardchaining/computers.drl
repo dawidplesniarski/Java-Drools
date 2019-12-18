@@ -1,21 +1,16 @@
 package org.drools.examples.backwardchaining
 import java.util.Scanner
+import java.awt.event.ActionListener
+import java.awt.event.ActionEvent
 
 dialect  "mvel"
 
-
-rule "zasilacz"
-when
-    String(this == "a")
-then
-    System.out.println("b");
-end
 
 rule Init when
 then
 System.out.println("Odpowiedz tak lub nie, t - tak n - nie");
 insert(new Question("1", "Czy komputer się uruchamia?"))
-
+//GUI.lMessage.setText("Czy komputer się uruchamia?");
 end
 
 rule UruchamiaSie when
@@ -314,24 +309,39 @@ then
 end
 
 
-
-
-
-rule AskQuestion when
+rule AskQuestion
+dialect "java"
+when
     q : Question()
     not Answer(question == q)
 then
-    System.out.println( q.question );
-    System.out.print("> ");
-    Scanner keyboard = new Scanner(System.in);
-    insert( keyboard.nextLine() );
+    //System.out.println( q.question );
+    GUI.lMessage.setText(q.question);
+//    GUI.yButton.addActionListener(new ActionListener()
+//    {@Override public void actionPerformed(ActionEvent actionEvent) {
+//    GUI.message = "t";
+//    System.out.println(GUI.message);
+//    insert( GUI.message );
+//    }});
+    GUI.nButton.addActionListener(new ActionListener()
+    {@Override public void actionPerformed(ActionEvent actionEvent) {
+    GUI.message = "n";
+    insert(GUI.message);
+    }});
+
+    //System.out.print("> ");
+    //Scanner keyboard = new Scanner(System.in);
+    //insert( keyboard.nextLine() );
 end
 
 rule ProcessAnswer when
+
     s : String(this matches "[tn]" )
     q : Question()
     not Answer( question == q)
 then
+
+
     insert( new Answer(q, s) );
     delete(s) ;
 end

@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a28709ed-796e-426a-89b9-8b5a056abb31" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/drools/examples/backwardchaining/ComputerDiagnostics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/drools/examples/backwardchaining/ComputerDiagnostics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/drools/examples/backwardchaining/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/drools/examples/backwardchaining/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/drools/examples/backwardchaining/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/drools/examples/backwardchaining/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/drools/examples/backwardchaining/computers.drl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/drools/examples/backwardchaining/computers.drl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/drools/examples/backwardchaining/ComputerDiagnostics.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/drools/examples/backwardchaining/ComputerDiagnostics.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/drools/examples/backwardchaining/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/drools/examples/backwardchaining/GUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/drools/examples/backwardchaining/computers.drl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/drools/examples/backwardchaining/computers.drl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,10 +104,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ComputerDiagnostics" />
-        <item itemvalue="Application.ComputerDiagnostics" />
-        <item itemvalue="Application.ComputerDiagnostics" />
-        <item itemvalue="Application.ComputerDiagnostics" />
-        <item itemvalue="Application.ComputerDiagnostics" />
       </list>
     </recent_temporary>
   </component>
@@ -125,6 +127,13 @@
       <workItem from="1576010767864" duration="794000" />
       <workItem from="1576011752490" duration="615000" />
       <workItem from="1576012420152" duration="465000" />
+      <workItem from="1576069217347" duration="62000" />
+      <workItem from="1576073033747" duration="1655000" />
+      <workItem from="1576101738072" duration="48000" />
+      <workItem from="1576601540910" duration="5719000" />
+      <workItem from="1576616950206" duration="3024000" />
+      <workItem from="1576662113488" duration="18000" />
+      <workItem from="1576662173074" duration="4781000" />
     </task>
     <task id="LOCAL-00001" summary="useless packages deleted">
       <created>1575984204529</created>
@@ -140,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576012640100</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Gui form created.">
+      <created>1576603257356</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1576603257356</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,7 +167,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -160,6 +178,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="useless packages deleted" />
     <MESSAGE value="Useless rule deleted." />
-    <option name="LAST_COMMIT_MESSAGE" value="Useless rule deleted." />
+    <MESSAGE value="Gui form created." />
+    <option name="LAST_COMMIT_MESSAGE" value="Gui form created." />
   </component>
 </project>
