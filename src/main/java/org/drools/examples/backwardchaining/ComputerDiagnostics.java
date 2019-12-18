@@ -10,17 +10,17 @@ import org.kie.api.runtime.KieSession;
 
 public class ComputerDiagnostics {
 
+    public static KieSession kieSession;
     public static void main(String[] args) throws Exception {
+
+
         GUI gui = new GUI();
         gui.setVisible(true);
 
         KieContainer kc = KieServices.Factory.get().getKieClasspathContainer();
-        KieSession ksession = kc.newKieSession("computers");
+        kieSession = kc.newKieSession("computers");
 
-
-        ksession.fireAllRules();
-        ksession.dispose();
+        kieSession.fireUntilHalt();
+        kieSession.dispose();
     }
-
-
 }

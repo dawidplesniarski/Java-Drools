@@ -2,9 +2,9 @@ package org.drools.examples.backwardchaining
 import java.util.Scanner
 import java.awt.event.ActionListener
 import java.awt.event.ActionEvent
+import javax.swing.SwingUtilities
 
 dialect  "mvel"
-
 
 rule Init when
 then
@@ -39,6 +39,7 @@ rule PokazujeKomunikatOBledzie when
     Answer(question == q, answer == "t")
 then
     System.out.println("Skorzystaj ze wsparcia systemu z użyciem kodu błędu");
+    GUI.LAnswer.setText("Skorzystaj ze wsparcia systemu z użyciem kodu błędu");
 end
 
 rule NiePokazujeKomunikatuOBledzie when
@@ -53,6 +54,7 @@ rule DzwiekNieDzialaPrawidlowo when
     Answer(question == q, answer == "n")
 then
     System.out.println("Sprawdz podłączenie kabla głośników");
+    GUI.LAnswer.setText("Sprawdz podłączenie kabla głośników");
 end
 
 rule DzwiekDzialaPrawidlowo when
@@ -74,6 +76,7 @@ rule AplikacjaPokazujeKomunikatZBledem when
     Answer(question == q, answer == "t")
 then
     System.out.println("Skorzystaj ze wsparcia producenta aplikacji");
+    GUI.LAnswer.setText("Skorzystaj ze wsparcia producenta aplikacji");
 end
 
 rule AplikacjaNiePokazujeKomunikatu when
@@ -88,6 +91,7 @@ rule AktualizacjeDostepne when
     Answer( question == q, answer == "t")
 then
     System.out.println("Zaktualizuj aplikacje");
+    GUI.LAnswer.setText("Zaktualizuj aplikacje");
 end
 
 rule AktualizacjeNieDostepne when
@@ -95,6 +99,7 @@ rule AktualizacjeNieDostepne when
     Answer(question == q, answer == "n")
 then
     System.out.println("Zainstaluj aplikacje ponownie");
+    GUI.LAnswer.setText("Zainstaluj aplikacje ponownie");
 end
 
 rule AplikacjaOdpowiada when
@@ -109,6 +114,7 @@ rule SystemNieAktualny when
     Answer(question == q, answer == "n")
 then
     System.out.println("Uruchom aktualizacje systemu");
+    GUI.LAnswer.setText("Uruchom aktualizacje systemu");
 end
 
 rule SystemAktualny when
@@ -123,6 +129,7 @@ rule SterownikiAktualne when
     Answer(question == q, answer == "t")
 then
     System.out.println("Uruchom skanowanie programem antywirusowym");
+    GUI.LAnswer.setText("Uruchom skanowanie programem antywirusowym");
 end
 
 rule SterownikiNieAktualne when
@@ -130,6 +137,7 @@ rule SterownikiNieAktualne when
     Answer(question == q, answer == "n")
 then
     System.out.println("Zaktualizuj sterowniki");
+    GUI.LAnswer.setText("Zaktualizuj sterowniki");
 end
 
 rule SystemNieUruchamiaSiePrawidlowo when
@@ -144,6 +152,7 @@ rule F8Pomoglo when
     Answer(question == q, answer == "t")
 then
     System.out.println("OK");
+    GUI.LAnswer.setText("OK");
 end
 
 rule F8NiePomoglo when
@@ -158,6 +167,7 @@ rule SkanowaniePomoglo when
     Answer(question == q, answer == "t")
 then
     System.out.println("OK");
+    GUI.LAnswer.setText("OK");
 end
 
 rule SkanowanieNiePomoglo when
@@ -165,6 +175,7 @@ rule SkanowanieNiePomoglo when
     Answer(question == q, answer == "n")
 then
     System.out.println("Uruchom narzędzie do diagnostyki dysku lub udaj się do serwisu w celu sprawdzenia dysku oraz RAM");
+    GUI.LAnswer.setText("Uruchom narzędzie do diagnostyki dysku lub udaj się do serwisu w celu sprawdzenia dysku oraz RAM");
 end
 
 rule ObrazNieJestWyswietlany when
@@ -179,6 +190,7 @@ rule MonitorNiePodpiety when
     Answer(question == q, answer == "n")
 then
     System.out.println("Podepnij monitor");
+    GUI.LAnswer.setText("Podepnij monitor");
 end
 
 rule MonitorPodpiety when
@@ -193,6 +205,7 @@ rule KabelNieSprawny when
     Answer(question == q, answer == "n")
 then
     System.out.println("Wymień kabel");
+    GUI.LAnswer.setText("Wymień kabel");
 end
 
 rule KabelSprawny when
@@ -201,6 +214,8 @@ rule KabelSprawny when
 then
     System.out.println("Uruchom Diagnostyke karty graficznej. Udaj się do serwisu w celu dokładnego sprawdzenia podzespołów. Odłącz wszystkie urządenia od komputera" +
      "lub uruchom ponownie komputer");
+     GUI.LAnswer.setText("Uruchom Diagnostyke karty graficznej. Udaj się do serwisu w celu dokładnego sprawdzenia podzespołów. Odłącz wszystkie urządenia od komputera" +
+                              "lub uruchom ponownie komputer");
 end
 
 rule KomputerSieNieWlacza when
@@ -215,6 +230,7 @@ rule KabelNiePodpiety when
     Answer(question == q, answer == "n")
 then
     System.out.println("Podepnij zasilanie");
+    GUI.LAnswer.setText("Podepnij zasilanie");
 end
 
 rule KabelPodpiety when
@@ -229,6 +245,7 @@ rule WlacznikOff when
     Answer(question == q, answer =="n")
 then
     System.out.println("Ustaw włącznik na pozycji 1");
+    GUI.LAnswer.setText("Ustaw włącznik na pozycji 1");
 end
 
 rule WlacznikOn when
@@ -243,6 +260,7 @@ rule KomputerNieReaguje when
     Answer(question == q, answer == "n")
 then
     System.out.println("Udaj się do serwsu lub wymień uszkodzony zasilacz");
+    GUI.LAnswer.setText("Udaj się do serwsu lub wymień uszkodzony zasilacz");
 end
 
 rule KomputerReaguje when
@@ -257,6 +275,7 @@ rule PojawiaSieKomunikatOBledach when
     Answer(question == q, answer == "t")
 then
     System.out.println("Skorzystaj ze wsparcia producenta używając kodu błędu.");
+    GUI.LAnswer.setText("Skorzystaj ze wsparcia producenta używając kodu błędu.");
 end
 
 rule NiePojawiaSieKomunikatOBledach when
@@ -271,6 +290,7 @@ rule ZwrocilKomunikat when
     Answer(question == q, answer == "t")
 then
     System.out.println("Skorzystaj ze wsparcia producenta używając kodu błędu.");
+    GUI.LAnswer.setText("Skorzystaj ze wsparcia producenta używając kodu błędu.");
 end
 
 rule NieZwrocilKomunikatu when
@@ -285,6 +305,7 @@ rule SafeModePomoglo when
     Answer(question == q, answer == "t")
 then
     System.out.println("OK");
+    GUI.LAnswer.setText("OK");
 end
 
 rule SafeModeNiePomoglo when
@@ -299,6 +320,7 @@ rule SkanPomogl when
     Answer(question == q, answer == "t")
 then
     System.out.println("OK");
+    GUI.LAnswer.setText("OK");
 end
 
 rule SkanNiePomogl when
@@ -306,6 +328,7 @@ rule SkanNiePomogl when
     Answer(question == q, answer == "n")
 then
     System.out.println("Udaj się do serwisu w celu sprawdzenia podzespołów");
+    GUI.LAnswer.setText("Udaj się do serwisu w celu sprawdzenia podzespołów");
 end
 
 
@@ -315,23 +338,18 @@ when
     q : Question()
     not Answer(question == q)
 then
-    //System.out.println( q.question );
     GUI.lMessage.setText(q.question);
-//    GUI.yButton.addActionListener(new ActionListener()
-//    {@Override public void actionPerformed(ActionEvent actionEvent) {
-//    GUI.message = "t";
-//    System.out.println(GUI.message);
-//    insert( GUI.message );
-//    }});
-//    GUI.nButton.addActionListener(new ActionListener()
-//    {@Override public void actionPerformed(ActionEvent actionEvent) {
-//    GUI.message = "n";
-//    insert(GUI.message);
-//    }});
+    SwingUtilities.invokeLater(new Runnable() {
+        @Override
+        public void run() {
+            GUI.yButton.addActionListener(actionEvent-> {
+                ComputerDiagnostics.kieSession.insert( "t" );
+            });
 
-    System.out.print("> ");
-    Scanner keyboard = new Scanner(System.in);
-    insert( keyboard.nextLine() );
+            GUI.nButton.addActionListener(actionEvent1 -> {
+                ComputerDiagnostics.kieSession.insert("n");
+            });
+    }});
 end
 
 rule ProcessAnswer when

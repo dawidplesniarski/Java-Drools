@@ -1,17 +1,23 @@
 package org.drools.examples.backwardchaining;
 
+import org.kie.api.runtime.KieSession;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.ByteArrayInputStream;
+import java.io.Console;
 import java.util.Scanner;
+
 
 public class GUI extends JFrame implements ActionListener {
 
     public static JLabel lMessage;
     public static JButton yButton,nButton;
     public static String message="";
+    public static JLabel LAnswer;
 
-    Scanner scanner = new Scanner(System.in);
+    //Scanner scanner = new Scanner(System.in);
 
     public GUI(){
         setTitle("System diagnostyczny");
@@ -23,35 +29,21 @@ public class GUI extends JFrame implements ActionListener {
         add(lMessage);
 
         yButton = new JButton("Tak");
-        yButton.setBounds(10,40,50,20);
+        yButton.setBounds(10,40,70,20);
         add(yButton);
 
         nButton = new JButton("Nie");
-        nButton.setBounds(340,40,50,20);
+        nButton.setBounds(320,40,70,20);
         add(nButton);
 
-//        yButton.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent actionEvent) {
-//                message = "t";
-//                System.out.println("t");
-//            }
-//        });
-//        nButton.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent actionEvent) {
-//                message = "n";
-//                System.out.println("n");
-//            }
-//        });
-
-
+        LAnswer = new JLabel("rozwiązanie");
+        LAnswer.setBounds(10,100,380,30);
+        add(LAnswer);
 
     }
 
-
     @Override
-    public void actionPerformed(ActionEvent actionEvent) {
+    public void actionPerformed(ActionEvent e) {
 
     }
 }
