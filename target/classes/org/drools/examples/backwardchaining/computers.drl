@@ -2,9 +2,10 @@ package org.drools.examples.backwardchaining
 import java.util.Scanner
 import java.awt.event.ActionListener
 import java.awt.event.ActionEvent
+import javax.swing.SwingUtilities
+import java.awt.Color
 
 dialect  "mvel"
-
 
 rule Init when
 then
@@ -39,6 +40,7 @@ rule PokazujeKomunikatOBledzie when
     Answer(question == q, answer == "t")
 then
     System.out.println("Skorzystaj ze wsparcia systemu z użyciem kodu błędu");
+    GUI.lAnswer.setText("Skorzystaj ze wsparcia systemu z użyciem kodu błędu");
 end
 
 rule NiePokazujeKomunikatuOBledzie when
@@ -52,7 +54,37 @@ rule DzwiekNieDzialaPrawidlowo when
     q : Question(id == "5")
     Answer(question == q, answer == "n")
 then
-    System.out.println("Sprawdz podłączenie kabla głośników");
+    insert(new Question("69", "Sprawdz podlaczenie glosnikow.\n Pomoglo?"))
+    //System.out.println("Sprawdz podłączenie kabla głośników");
+    //GUI.lAnswer.setText("Sprawdz podłączenie kabla głośników\nPomogło?");
+end
+
+rule GlosnikiPodpietePrawidlowo when
+    q : Question(id == "69")
+    Answer(question == q, answer == "n")
+then
+    insert(new Question("70", "Czy zainstalowane są sterowniki karty dzwiekowej?"))
+end
+
+rule BrakSterownikow when
+    q: Question(id == "70")
+    Answer(question == q, answer == "n")
+then
+GUI.lAnswer.setText("Zainstaluj sterowniki karty dźwiękowej.");
+end
+
+rule SterownikiDzwiekoweZainstalowane when
+    q: Question(id == "70")
+    Answer(question == q, answer == "t")
+then
+    insert(new Question("71", "Czy głośniki działają poprawnie z innym urządzeniem?"))
+end
+
+rule GlosnikiDzialajaPoprawnie when
+    q: Question(id == "71")
+    Answer(question == q, answer == "t")
+then
+    GUI.lAnswer.setText("Wymień uszkodzoną kartę dźwiękową lub udaj się do serwisu\nw celu sprawdzenia podzespolow");
 end
 
 rule DzwiekDzialaPrawidlowo when
@@ -74,6 +106,7 @@ rule AplikacjaPokazujeKomunikatZBledem when
     Answer(question == q, answer == "t")
 then
     System.out.println("Skorzystaj ze wsparcia producenta aplikacji");
+    GUI.lAnswer.setText("Skorzystaj ze wsparcia producenta aplikacji");
 end
 
 rule AplikacjaNiePokazujeKomunikatu when
@@ -88,6 +121,7 @@ rule AktualizacjeDostepne when
     Answer( question == q, answer == "t")
 then
     System.out.println("Zaktualizuj aplikacje");
+    GUI.lAnswer.setText("Zaktualizuj aplikacje");
 end
 
 rule AktualizacjeNieDostepne when
@@ -95,6 +129,7 @@ rule AktualizacjeNieDostepne when
     Answer(question == q, answer == "n")
 then
     System.out.println("Zainstaluj aplikacje ponownie");
+    GUI.lAnswer.setText("Zainstaluj aplikacje ponownie");
 end
 
 rule AplikacjaOdpowiada when
@@ -109,6 +144,7 @@ rule SystemNieAktualny when
     Answer(question == q, answer == "n")
 then
     System.out.println("Uruchom aktualizacje systemu");
+    GUI.lAnswer.setText("Uruchom aktualizacje systemu");
 end
 
 rule SystemAktualny when
@@ -123,6 +159,7 @@ rule SterownikiAktualne when
     Answer(question == q, answer == "t")
 then
     System.out.println("Uruchom skanowanie programem antywirusowym");
+    GUI.lAnswer.setText("Uruchom skanowanie programem antywirusowym");
 end
 
 rule SterownikiNieAktualne when
@@ -130,6 +167,7 @@ rule SterownikiNieAktualne when
     Answer(question == q, answer == "n")
 then
     System.out.println("Zaktualizuj sterowniki");
+    GUI.lAnswer.setText("Zaktualizuj sterowniki");
 end
 
 rule SystemNieUruchamiaSiePrawidlowo when
@@ -144,6 +182,7 @@ rule F8Pomoglo when
     Answer(question == q, answer == "t")
 then
     System.out.println("OK");
+    GUI.lAnswer.setText("OK");
 end
 
 rule F8NiePomoglo when
@@ -158,6 +197,7 @@ rule SkanowaniePomoglo when
     Answer(question == q, answer == "t")
 then
     System.out.println("OK");
+    GUI.lAnswer.setText("OK");
 end
 
 rule SkanowanieNiePomoglo when
@@ -165,6 +205,7 @@ rule SkanowanieNiePomoglo when
     Answer(question == q, answer == "n")
 then
     System.out.println("Uruchom narzędzie do diagnostyki dysku lub udaj się do serwisu w celu sprawdzenia dysku oraz RAM");
+    GUI.lAnswer.setText("Uruchom narzędzie do diagnostyki dysku\n lub udaj się do serwisu w celu sprawdzenia dysku oraz RAM");
 end
 
 rule ObrazNieJestWyswietlany when
@@ -179,6 +220,7 @@ rule MonitorNiePodpiety when
     Answer(question == q, answer == "n")
 then
     System.out.println("Podepnij monitor");
+    GUI.lAnswer.setText("Podepnij monitor");
 end
 
 rule MonitorPodpiety when
@@ -193,6 +235,7 @@ rule KabelNieSprawny when
     Answer(question == q, answer == "n")
 then
     System.out.println("Wymień kabel");
+    GUI.lAnswer.setText("Wymień kabel");
 end
 
 rule KabelSprawny when
@@ -201,6 +244,7 @@ rule KabelSprawny when
 then
     System.out.println("Uruchom Diagnostyke karty graficznej. Udaj się do serwisu w celu dokładnego sprawdzenia podzespołów. Odłącz wszystkie urządenia od komputera" +
      "lub uruchom ponownie komputer");
+     GUI.lAnswer.setText("Uruchom Diagnostyke karty graficznej.\nUdaj się do serwisu w celu dokładnego sprawdzenia podzespołów.\nOdłącz wszystkie urządenia od komputera\nlub uruchom ponownie komputer");
 end
 
 rule KomputerSieNieWlacza when
@@ -215,6 +259,7 @@ rule KabelNiePodpiety when
     Answer(question == q, answer == "n")
 then
     System.out.println("Podepnij zasilanie");
+    GUI.lAnswer.setText("Podepnij zasilanie");
 end
 
 rule KabelPodpiety when
@@ -229,6 +274,7 @@ rule WlacznikOff when
     Answer(question == q, answer =="n")
 then
     System.out.println("Ustaw włącznik na pozycji 1");
+    GUI.lAnswer.setText("Ustaw włącznik na pozycji 1");
 end
 
 rule WlacznikOn when
@@ -243,6 +289,7 @@ rule KomputerNieReaguje when
     Answer(question == q, answer == "n")
 then
     System.out.println("Udaj się do serwsu lub wymień uszkodzony zasilacz");
+    GUI.lAnswer.setText("Udaj się do serwisu lub wymień uszkodzony zasilacz");
 end
 
 rule KomputerReaguje when
@@ -257,6 +304,7 @@ rule PojawiaSieKomunikatOBledach when
     Answer(question == q, answer == "t")
 then
     System.out.println("Skorzystaj ze wsparcia producenta używając kodu błędu.");
+    GUI.lAnswer.setText("Skorzystaj ze wsparcia producenta używając kodu błędu.");
 end
 
 rule NiePojawiaSieKomunikatOBledach when
@@ -271,6 +319,7 @@ rule ZwrocilKomunikat when
     Answer(question == q, answer == "t")
 then
     System.out.println("Skorzystaj ze wsparcia producenta używając kodu błędu.");
+    GUI.lAnswer.setText("Skorzystaj ze wsparcia producenta używając kodu błędu.");
 end
 
 rule NieZwrocilKomunikatu when
@@ -285,6 +334,7 @@ rule SafeModePomoglo when
     Answer(question == q, answer == "t")
 then
     System.out.println("OK");
+    GUI.lAnswer.setText("Problemem był prawdopodobnie błąd systemu");
 end
 
 rule SafeModeNiePomoglo when
@@ -299,6 +349,7 @@ rule SkanPomogl when
     Answer(question == q, answer == "t")
 then
     System.out.println("OK");
+    GUI.lAnswer.setText("OK");
 end
 
 rule SkanNiePomogl when
@@ -306,6 +357,7 @@ rule SkanNiePomogl when
     Answer(question == q, answer == "n")
 then
     System.out.println("Udaj się do serwisu w celu sprawdzenia podzespołów");
+    GUI.lAnswer.setText("Udaj się do serwisu w celu sprawdzenia podzespołów");
 end
 
 
@@ -315,23 +367,18 @@ when
     q : Question()
     not Answer(question == q)
 then
-    //System.out.println( q.question );
     GUI.lMessage.setText(q.question);
-//    GUI.yButton.addActionListener(new ActionListener()
-//    {@Override public void actionPerformed(ActionEvent actionEvent) {
-//    GUI.message = "t";
-//    System.out.println(GUI.message);
-//    insert( GUI.message );
-//    }});
-    GUI.nButton.addActionListener(new ActionListener()
-    {@Override public void actionPerformed(ActionEvent actionEvent) {
-    GUI.message = "n";
-    insert(GUI.message);
-    }});
+    SwingUtilities.invokeLater(new Runnable() {
+        @Override
+        public void run() {
+            GUI.yButton.addActionListener(actionEvent-> {
+                ComputerDiagnostics.kieSession.insert( "t" );
+            });
 
-    //System.out.print("> ");
-    //Scanner keyboard = new Scanner(System.in);
-    //insert( keyboard.nextLine() );
+            GUI.nButton.addActionListener(actionEvent1 -> {
+                ComputerDiagnostics.kieSession.insert("n");
+            });
+    }});
 end
 
 rule ProcessAnswer when
