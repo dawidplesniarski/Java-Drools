@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a28709ed-796e-426a-89b9-8b5a056abb31" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/drools/examples/backwardchaining/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/drools/examples/backwardchaining/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/org/drools/examples/backwardchaining/computers.drl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/drools/examples/backwardchaining/computers.drl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/drools/examples/backwardchaining/Answer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/drools/examples/backwardchaining/Answer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/drools/examples/backwardchaining/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/drools/examples/backwardchaining/GUI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/drools/examples/backwardchaining/computers.drl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/drools/examples/backwardchaining/computers.drl" afterDir="false" />
     </list>
@@ -140,7 +139,9 @@
       <workItem from="1576662113488" duration="18000" />
       <workItem from="1576662173074" duration="4781000" />
       <workItem from="1576668092409" duration="9378000" />
-      <workItem from="1578419854589" duration="1863000" />
+      <workItem from="1578419854589" duration="3380000" />
+      <workItem from="1578430761584" duration="1554000" />
+      <workItem from="1578492068861" duration="1249000" />
     </task>
     <task id="LOCAL-00001" summary="useless packages deleted">
       <created>1575984204529</created>
@@ -163,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576603257356</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Some rules added and bugs fixed">
+      <created>1578421931932</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1578421931932</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,7 +194,8 @@
     <MESSAGE value="useless packages deleted" />
     <MESSAGE value="Useless rule deleted." />
     <MESSAGE value="Gui form created." />
-    <option name="LAST_COMMIT_MESSAGE" value="Gui form created." />
+    <MESSAGE value="Some rules added and bugs fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some rules added and bugs fixed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Project_Structure" timestamp="1576668430193">

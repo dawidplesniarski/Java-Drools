@@ -16,11 +16,11 @@ public class GUI extends JFrame implements ActionListener {
 
     public GUI(){
         setTitle("System diagnostyczny");
-        setSize(400, 400);
+        setSize(500, 300);
         setLayout(null);
 
         lMessage = new JLabel();
-        lMessage.setBounds(10,10,380,60);
+        lMessage.setBounds(10,10,480,60);
         add(lMessage);
 
         yButton = new JButton("Tak");
@@ -28,11 +28,11 @@ public class GUI extends JFrame implements ActionListener {
         add(yButton);
 
         nButton = new JButton("Nie");
-        nButton.setBounds(320,60,70,20);
+        nButton.setBounds(420,60,70,20);
         add(nButton);
 
         lAnswer = new JTextArea();
-        lAnswer.setBounds(10,100,380,80);
+        lAnswer.setBounds(10,100,480,80);
         add(lAnswer);
 
     }
