@@ -61,6 +61,13 @@ then
     insert(new Question("70", "Czy zainstalowane są sterowniki karty dzwiekowej?"))
 end
 
+rule GlosnikiNieBylyPodlaczone when
+    q : Question(id == "69")
+    Answer(question == q, answer == "t")
+then
+    GUI.lAnswer.setText("Problem rozwiazany");
+end
+
 rule BrakSterownikow when
     q: Question(id == "70")
     Answer(question == q, answer == "n")
@@ -324,7 +331,7 @@ rule NiePojawiaSieKomunikatOBledach when
     q : Question(id == "18")
     Answer(question == q, answer == "n")
 then
-    insert(new Question("19", "Odłącz zasilacz na chwile i uruchom komputer ponownie. Czy komputer zwrócił komunikat"));
+    insert(new Question("19", "Odłącz zasilacz na chwile i\nuruchom komputer ponownie. Czy komputer zwrócił komunikat"));
 end
 
 rule ZwrocilKomunikat when
@@ -387,6 +394,19 @@ then
             GUI.nButton.addActionListener(actionEvent1 -> {
                 ComputerDiagnostics.kieSession.insert("n");
             });
+
+            GUI.lComboBox.addActionListener(actionEvent2 -> {
+               if(GUI.selectedIssue == "Obraz"){
+                   ComputerDiagnostics.kieSession.insert(new Question("13", "Czy monitor jest podpięty do komputera?"));
+               }
+               if(GUI.selectedIssue == "Dźwięk"){
+                   ComputerDiagnostics.kieSession.insert(new Question("69", "Sprawdz podłączenie głośników. Pomogło?"));
+               }
+               if(GUI.selectedIssue == "Zasilanie"){
+               ComputerDiagnostics.kieSession.insert(new Question("1", "Czy komputer się uruchamia?"));
+               }
+            });
+
     }});
 end
 

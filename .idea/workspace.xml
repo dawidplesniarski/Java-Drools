@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a28709ed-796e-426a-89b9-8b5a056abb31" name="Default Changelist" comment="">
+    <list default="true" id="a28709ed-796e-426a-89b9-8b5a056abb31" name="Default Changelist" comment="cleanup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/drools/examples/backwardchaining/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/drools/examples/backwardchaining/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/org/drools/examples/backwardchaining/computers.drl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/drools/examples/backwardchaining/computers.drl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/drools/examples/backwardchaining/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/drools/examples/backwardchaining/GUI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/drools/examples/backwardchaining/computers.drl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/drools/examples/backwardchaining/computers.drl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -141,7 +139,9 @@
       <workItem from="1576668092409" duration="9378000" />
       <workItem from="1578419854589" duration="3380000" />
       <workItem from="1578430761584" duration="1554000" />
-      <workItem from="1578492068861" duration="1249000" />
+      <workItem from="1578492068861" duration="1526000" />
+      <workItem from="1578578366773" duration="2000" />
+      <workItem from="1579622165174" duration="5250000" />
     </task>
     <task id="LOCAL-00001" summary="useless packages deleted">
       <created>1575984204529</created>
@@ -171,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578421931932</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="cleanup">
+      <created>1578493344028</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1578493344028</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,7 +202,8 @@
     <MESSAGE value="Useless rule deleted." />
     <MESSAGE value="Gui form created." />
     <MESSAGE value="Some rules added and bugs fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some rules added and bugs fixed" />
+    <MESSAGE value="cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Project_Structure" timestamp="1576668430193">
