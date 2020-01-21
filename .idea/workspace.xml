@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a28709ed-796e-426a-89b9-8b5a056abb31" name="Default Changelist" comment="cleanup">
+    <list default="true" id="a28709ed-796e-426a-89b9-8b5a056abb31" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/drools/examples/backwardchaining/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/drools/examples/backwardchaining/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/org/drools/examples/backwardchaining/computers.drl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/drools/examples/backwardchaining/computers.drl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/drools/examples/backwardchaining/computers.drl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/drools/examples/backwardchaining/computers.drl" afterDir="false" />
     </list>
@@ -141,7 +140,7 @@
       <workItem from="1578430761584" duration="1554000" />
       <workItem from="1578492068861" duration="1526000" />
       <workItem from="1578578366773" duration="2000" />
-      <workItem from="1579622165174" duration="5250000" />
+      <workItem from="1579622165174" duration="6357000" />
     </task>
     <task id="LOCAL-00001" summary="useless packages deleted">
       <created>1575984204529</created>
@@ -178,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578493344028</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Combo box added. Works but it have bugs.">
+      <created>1579627760215</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1579627760215</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,40 +209,25 @@
     <MESSAGE value="Gui form created." />
     <MESSAGE value="Some rules added and bugs fixed" />
     <MESSAGE value="cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
+    <MESSAGE value="Combo box added. Works but it have bugs." />
+    <option name="LAST_COMMIT_MESSAGE" value="Combo box added. Works but it have bugs." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="178" key="#Project_Structure" timestamp="1576668430193">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="178" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1576668430193" />
-    <state x="732" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1576677273972">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="732" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1576677273972" />
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1576687466880">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1576687466880" />
-    <state width="1877" height="183" key="GridCell.Tab.0.bottom" timestamp="1576688943504">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1576688943504" />
-    <state width="1877" height="183" key="GridCell.Tab.0.center" timestamp="1576688943503">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1576688943503" />
-    <state width="1877" height="183" key="GridCell.Tab.0.left" timestamp="1576688943503">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1576688943503" />
-    <state width="1877" height="183" key="GridCell.Tab.0.right" timestamp="1576688943504">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1576688943504" />
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1576676388616">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1576676388616" />
+    <state x="552" y="178" key="#Project_Structure" />
+    <state x="552" y="178" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" />
+    <state x="732" y="322" key="#com.intellij.fileTypes.FileTypeChooser" />
+    <state x="732" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="183" key="GridCell.Tab.0.bottom" />
+    <state width="1877" height="183" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="183" key="GridCell.Tab.0.center" />
+    <state width="1877" height="183" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="183" key="GridCell.Tab.0.left" />
+    <state width="1877" height="183" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1877" height="183" key="GridCell.Tab.0.right" />
+    <state width="1877" height="183" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" />
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup" />
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" />
   </component>
 </project>

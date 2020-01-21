@@ -396,7 +396,8 @@ then
             });
 
             GUI.lComboBox.addActionListener(actionEvent2 -> {
-               if(GUI.selectedIssue == "Obraz"){
+
+                if(GUI.selectedIssue == "Obraz"){
                    ComputerDiagnostics.kieSession.insert(new Question("13", "Czy monitor jest podpięty do komputera?"));
                }
                if(GUI.selectedIssue == "Dźwięk"){
@@ -404,6 +405,9 @@ then
                }
                if(GUI.selectedIssue == "Zasilanie"){
                ComputerDiagnostics.kieSession.insert(new Question("1", "Czy komputer się uruchamia?"));
+               }
+               if(GUI.selectedIssue == "Aplikacja"){
+               ComputerDiagnostics.kieSession.insert(new Question("6", "Czy któraś aplikacja nie odpowiada?"));
                }
             });
 
